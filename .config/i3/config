@@ -1,0 +1,197 @@
+# i3 config file (v4)
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+
+# GLOBAL VARIABLES:
+
+# Use the Windows key as our modifier
+set $mod Mod4
+
+focus_follows_mouse no
+
+
+# FONTS:
+
+# Font for window titles. 
+font pango:Hack 8
+
+
+# SHORTCUTS:
+
+# Start a terminal
+bindsym $mod+Return exec i3-sensible-terminal
+
+# Start dmenu
+bindsym $mod+d exec "dmenu_run -i -nf '#CFD8DC' -nb '#263238' -sb '#37474F' -sf '#ECEFF1' -fn 'Hack-10'"
+
+# Volume control
+# Also signal for i3blocks
+bindsym $mod+F9 exec pavolume -5%; exec pkill -64 i3blocks
+bindsym $mod+F10 exec pavolume +5%; exec pkill -64 i3blocks
+
+
+# WINDOW MANAGEMENT:
+
+# Change focus with vim bindings
+bindsym $mod+i focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+# alternatively, use the cursor keys
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Move the focused window with vim bindings
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+# alternatively, use the cursor keys
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Set splitting direction
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+# Resize window
+mode "resize" {
+	# Resize the window with vim bindings
+	bindsym h resize shrink width 10 px or 10 ppt
+	bindsym j resize grow height 10 px or 10 ppt
+	bindsym k resize shrink height 10 px or 10 ppt
+	bindsym l resize grow width 10 px or 10 ppt
+	# alternatively, use the arrow keys
+	bindsym Left resize shrink width 10 px or 10 ppt
+	bindsym Down resize grow height 10 px or 10 ppt
+	bindsym Up resize shrink height 10 px or 10 ppt
+	bindsym Right resize grow width 10 px or 10 ppt
+	
+	# Do it again but with the $mod key since I tend to hold it down
+	bindsym $mod+h resize shrink width 10 px or 10 ppt
+	bindsym $mod+j resize grow height 10 px or 10 ppt
+	bindsym $mod+k resize shrink height 10 px or 10 ppt
+	bindsym $mod+l resize grow width 10 px or 10 ppt
+	bindsym $mod+Left resize shrink width 10 px or 10 ppt
+	bindsym $mod+Down resize grow height 10 px or 10 ppt
+	bindsym $mod+Up resize shrink height 10 px or 10 ppt
+	bindsym $mod+Right resize grow width 10 px or 10 ppt
+	
+	bindsym Return mode "default"
+	bindsym Escape mode "default"
+	bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+# Kill focused window
+bindsym $mod+F4 kill
+bindsym $mod+q kill
+# Fullscreen for any application
+bindsym $mod+F11 fullscreen toggle
+
+# Change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# Toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+# and change focus between them
+bindsym $mod+space focus mode_toggle
+
+# Scratchpad capabilities
+bindsym $mod+x move scratchpad
+bindsym $mod+z scratchpad show
+
+
+# WORKSPACE MANAGEMENT:
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+# Use both the number row and the number pad
+set $ws1 "1: Default"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8: Compile"
+set $ws9 "9: Music"
+
+# Move workspaces
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+
+# Switch workspaces
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+
+# Move container between workspaces
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+
+
+# BOTTOM BAR:
+
+# Start i3blocks to display a workspace bar 
+bar {
+	# Set the font for the bar
+	font pango:Hack 8
+	status_command i3blocks
+	
+	# Colors selected from thomashunter.name/i3-configurator
+	# Color scheme from terminal.sexy
+	colors {
+		background #263238
+		statusline #CFD8DC
+		separator #CFD8DC
+		
+		focused_workspace #263238 #263238 #03A9F4
+		active_workspace #263238 #263238 #03A9F4
+		inactive_workspace #263238 #263238 #CFD8DC
+		urgent_workspace #263238 #263238 #E91E63
+		binding_mode #263238 #263238 #E91E63
+	}
+}
+
+# GAPS:
+
+# Required for gaps to work
+for_window [class=".*"] border pixel 0
+
+# Gaps between windows
+gaps inner 20
+# Gaps between screen and windows less inner gaps
+gaps outer -5 
+
+# Only gaps when there is more than one container
+smart_gaps on
+# Draw borders if there is more than one window
+smart_borders on
+
+
+# CONFIG FILE LOADING:
+
+# Reload the configuration file
+bindsym $mod+Shift+c reload
+# Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
