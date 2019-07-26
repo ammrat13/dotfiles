@@ -2,29 +2,21 @@
 separator=true
 separator_block_width=20
 
+# We outsourced our commands
+command=.config/i3blocks/scripts/${BLOCK_NAME}.sh
+
 [volume]
-# Need a delay so it actually works
-command=sleep .01; echo "VOL: $(pacmd list-sinks | grep -A8 '\*' | grep 'volume' | tr -d '[:blank:]' | sed -e 's/^[^\/]*\///g' -e 's/\/.*//g')"
 interval=once
 signal=30
 
-[inet]
-# Displays the local ip address and colors it white if we have internet, red 
-# otherwise
-command=echo "$(ip addr | grep enp4s0 | tail -n1 | sed -e 's/[^0-9.\/]//g' -e 's/\/.*$//g')"; echo "$(ip addr | grep enp4s0 | tail -n1 | sed -e 's/[^0-9.\/]//g' -e 's/\/.*$//g')"; if [[ $(ping -c1 google.com | sed -e '5!d' | grep '1 r') ]]; then echo "#FFFFFF"; else echo "#FF0000"; fi
-interval=30
-
 [cpu]
-# A horrendous one-liner that gets the CPU usage and colors it red if above 
-# 90% and yellow if between 10% and 90%
-command=echo "CPU: $(mpstat | sed -e '4!d' | awk '{print $3}')%"; echo "CPU: $(mpstat | sed -e '4!d' | awk '{print $3}')%"; if [[ $(mpstat | sed -e '4!d' | awk '{print $3}' | sed -e 's/\..*$//g') -ge '90' ]]; then echo "#FF0000"; elif [[ $(mpstat | sed -e '4!d' | awk '{print $3}' | sed -e 's/\..*$//g') -ge '10' ]]; then echo "#FFFF00"; else echo "#FFFFFF"; fi
+interval=10
+
+[gpu]
 interval=10
 
 [ram]
-# Another horrendous one-liner that retrieves the memory and swap usage and 
-# colors them red if we are swapping
-command=echo "MEM: $(free -m | sed -e '2!d' | awk '{print $3}' | xargs printf '%d/1024\n' | bc -l | xargs printf '%.2f') GiB  SW: $(free -m | sed -e '3!d' | awk '{print $3}' | xargs printf '%d/1024\n' | bc -l | xargs printf '%.2f') GiB"; echo "MEM: $(free -m | sed -e '2!d' | awk '{print $3}' | xargs printf '%d/1024\n' | bc -l | xargs printf '%.2f') GiB  SW: $(f   ree -m | sed -e '3!d' | awk '{print $3}' | xargs printf '%d/1024\n' | bc -l | xargs printf '%.2f') GiB"; if [[ $(free -m | sed -e '3!d' | awk '{print $3}') != '0' ]]; then echo "#FF0000"; else echo "#FFFFFF"; fi
-interval=10
+interval=30
 
 [date]
 command=echo "$(date '+%a %Y-%m-%d %H:%M')"

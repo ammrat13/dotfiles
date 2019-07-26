@@ -114,7 +114,7 @@ bindsym $mod+z scratchpad show
 # We use variables to avoid repeating the names in multiple places.
 # Use both the number row and the number pad
 set $ws1 "1: Default"
-set $ws2 "2"
+set $ws2 "2: Reference"
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
