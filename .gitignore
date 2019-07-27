@@ -29,3 +29,7 @@
 !.config/i3blocks/config
 !.config/i3blocks/scripts
 !.config/i3blocks/*
+
+# except for icons
+!.icons
+!.icons/**
