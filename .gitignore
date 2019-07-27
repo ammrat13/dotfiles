@@ -1,0 +1,31 @@
+# Ignore everything
+*
+
+# except for the following files
+!.gitignore
+
+# X11
+!.Xresources
+!.xinitrc
+
+# Bash
+!.bash_profile
+!.bashrc
+
+# Vim
+!.vimrc
+
+# except for some stuff in the .config folder
+!.config
+.config/*
+
+# Compton
+!.config/compton.conf
+
+# i3
+!.config/i3/config
+
+# i3blocks
+!.config/i3blocks/config
+!.config/i3blocks/scripts
+!.config/i3blocks/*
