@@ -20,6 +20,9 @@ font pango:Hack 8
 # Start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
 
+# Start firefox
+bindsym $mod+BackSpace exec firefox
+
 # Start dmenu
 bindsym $mod+d exec "dmenu_run -i -nf '#CFD8DC' -nb '#263238' -sb '#37474F' -sf '#ECEFF1' -fn 'Hack-10'"
 
