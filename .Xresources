@@ -6,31 +6,23 @@ URxvt*scrollBar: 0
 URxvt*font:xft:Hack:size=8
 
 ! Chosen at terminal.sexy
-! special
-URxvt*foreground:   #eceff1
-URxvt*background:   #263238
-URxvt*cursorColor:  #eceff1
-! black
-URxvt*color0:       #263238
-URxvt*color8:       #37474f
-! red
-URxvt*color1:       #ff9800
-URxvt*color9:       #ffa74d
-! green
-URxvt*color2:       #8bc34a
-URxvt*color10:      #9ccc65
-! yellow
-URxvt*color3:       #ffc107
-URxvt*color11:      #ffa000
-! blue
-URxvt*color4:       #03a9f4
-URxvt*color12:      #81d4fa
-! magenta
-URxvt*color5:       #e91e63
-URxvt*color13:      #ad1457
-! cyan
-URxvt*color6:       #009688
-URxvt*color14:      #26a69a
-! white
-URxvt*color7:       #cfd8dc
-URxvt*color15:      #eceff1
+! Chosen with https://github.com/thefryscorer/schemer
+URxvt*foreground:   #a6c0d8
+URxvt*background:   #0e2d3e
+URxvt*cursorColor:  #a6c0d8
+URxvt*color0:       #11384d
+URxvt*color8:       #11384d
+URxvt*color1:       #53402d
+URxvt*color9:       #53402d
+URxvt*color2:       #7d7a85
+URxvt*color10:      #7d7a85
+URxvt*color3:       #ac9f9b
+URxvt*color11:      #ac9f9b
+URxvt*color4:       #6fa0c8
+URxvt*color12:      #6fa0c8
+URxvt*color5:       #447eac
+URxvt*color13:      #447eac
+URxvt*color6:       #365c77
+URxvt*color14:      #365c77
+URxvt*color7:       #a6c0d8
+URxvt*color15:      #a6c0d8

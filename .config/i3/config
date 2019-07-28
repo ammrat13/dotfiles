@@ -61,7 +61,7 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # Resize window
-mode "resize" {
+mode "Resize" {
 	# Resize the window with vim bindings
 	bindsym h resize shrink width 10 px or 10 ppt
 	bindsym j resize grow height 10 px or 10 ppt
@@ -92,7 +92,7 @@ mode "resize" {
 	bindsym $mod+q kill; mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode "Resize"
 
 # Kill focused window
 bindsym $mod+F4 kill
@@ -162,12 +162,12 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 # Colors selected from thomashunter.name/i3-configurator
 # # Color scheme from terminal.sexy
 # class                 border  bground text    indicator child_border
-client.focused          #263238 #263238 #03A9F4 #263238   #263238
-client.focused_inactive #263238 #263238 #ECEFF1 #263238   #263238
-client.unfocused        #263238 #263238 #CFD8DC #263238   #263238
-client.urgent           #263238 #263238 #E91E63 #263238   #263238
-client.placeholder      #263238 #263238 #ECEFF1 #263238   #263238
-client.background       #263238
+client.focused          #0e2d3e #0e2d3e #a6c0d8 #0e2d3e   #0e2d3e
+client.focused_inactive #0e2d3e #0e2d3e #a6c0d8 #0e2d3e   #0e2d3e
+client.unfocused        #0e2d3e #0e2d3e #6fa0c8 #0e2d3e   #0e2d3e
+client.urgent           #0e2d3e #0e2d3e #ac9f9b #0e2d3e   #0e2d3e
+client.placeholder      #0e2d3e #0e2d3e #a6c0d8 #0e2d3e   #0e2d3e
+client.background       #0e2d3e
 
 
 # BOTTOM BAR:
@@ -181,15 +181,15 @@ bar {
 	# Colors selected from thomashunter.name/i3-configurator
 	# Color scheme from terminal.sexy
 	colors {
-		background #263238
-		statusline #CFD8DC
-		separator #CFD8DC
+		background #0e2d3e
+		statusline #6fa0c8
+		separator #447eac
 		
-		focused_workspace #263238 #263238 #03A9F4
-		active_workspace #263238 #263238 #03A9F4
-		inactive_workspace #263238 #263238 #CFD8DC
-		urgent_workspace #263238 #263238 #E91E63
-		binding_mode #263238 #263238 #E91E63
+		focused_workspace #0e2d3e #0e2d3e #a6c0d8
+		active_workspace #0e2d3e #0e2d3e #a6c0d8
+		inactive_workspace #0e2d3e #0e2d3e #6fa0c8
+		urgent_workspace #0e2d3e #0e2d3e #ac9f9b
+		binding_mode #0e2d3e #0e2d3e #ac9f9b
 	}
 }
 
