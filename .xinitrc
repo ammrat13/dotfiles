@@ -7,8 +7,9 @@ fi
 pulseaudio --start
 # Start compton for saturation effects
 compton &
+
 # Set desktop background
-feh --bg-scale ~/wallpaper.png
+feh --no-fehbg --bg-scale ~/wallpaper.jpg
 # Disable screensaver
 xset s off
 xset -dpms
