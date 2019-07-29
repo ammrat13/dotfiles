@@ -24,7 +24,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+BackSpace exec firefox
 
 # Start dmenu
-bindsym $mod+d exec "i3-dmenu-desktop --dmenu='dmenu -i -nf #CFD8DC -nb #263238 -sb #37474F -sf #ECEFF1 -fn Hack-10'"
+bindsym $mod+d exec --no-startup-id "i3-dmenu-desktop --dmenu='dmenu -i -nf #6fa0c8 -nb #0e2d3e -sb #11384d -sf #a6c0d8 -fn Hack-10'"
 
 # Volume control
 # Also signal for i3blocks
@@ -112,7 +112,7 @@ bindsym $mod+space focus mode_toggle
 
 # Scratchpad capabilities
 bindsym $mod+x move scratchpad
-bindsym $mod+z scratchpad show
+bindsym $mod+z scratchpad show; floating toggle
 
 
 # WORKSPACE MANAGEMENT:
