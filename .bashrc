@@ -11,6 +11,9 @@ if [[ $- != *i* ]] ; then
 	return
 fi
 
+# Use aliases with sudo
+alias sudo="sudo "
+
 # MIDNIGHT COMMANDER
 # Exit into the current directory
-alias mc=". /usr/libexec/mc/mc-wrapper.sh --nocolor"
+alias mc="/usr/libexec/mc/mc-wrapper.sh --nocolor"
