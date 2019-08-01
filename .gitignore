@@ -4,9 +4,15 @@
 # except for the following files
 !.gitignore
 
-# X11
-!.Xresources
-!.xinitrc
+# except for some stuff in the .config folder
+!.config
+.config/*
+
+# except for some stuff in .local/share
+!.local
+.local/*
+!.local/share
+.local/share/*
 
 # Bash
 !.bash_profile
@@ -15,9 +21,10 @@
 # Vim
 !.vimrc
 
-# except for some stuff in the .config folder
-!.config
-.config/*
+# Midnight Commander
+!.local/share/applications
+.local/share/applications/*
+!.local/share/applications/mc.desktop
 
 # Compton
 !.config/compton.conf
@@ -28,6 +35,9 @@
 # i3blocks
 !.config/i3blocks/config
 !.config/i3blocks/scripts
+
+# Custom MIME Types
+!.config/mimeapps.list
 
 # GTK
 !.gtkrc-2.0
@@ -41,3 +51,7 @@
 !.config/Kvantum/**
 !.config/qt5ct
 !.config/qt5ct/**
+
+# X11
+!.Xresources
+!.xinitrc
