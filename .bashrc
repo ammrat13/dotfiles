@@ -15,5 +15,5 @@ fi
 alias sudo="sudo "
 
 # MIDNIGHT COMMANDER
-# Exit into the current directory
-alias mc="/usr/libexec/mc/mc-wrapper.sh --nocolor"
+# No color by default
+alias mc="mc --nocolor"
