@@ -10,6 +10,8 @@ application/x-extension-shtml=userapp-Firefox-II0D5Z.desktop
 application/xhtml+xml=userapp-Firefox-II0D5Z.desktop
 application/x-extension-xhtml=userapp-Firefox-II0D5Z.desktop
 application/x-extension-xht=userapp-Firefox-II0D5Z.desktop
+
+# My custom associations
 inode/directory=mc.desktop
 
 [Added Associations]
