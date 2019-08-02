@@ -28,8 +28,9 @@ bindsym $mod+d exec --no-startup-id "i3-dmenu-desktop --dmenu='dmenu -i -nf #6fa
 
 # Volume control
 # Also signal for i3blocks
-bindsym $mod+F9 exec ~/.config/i3/pavolume -5%; exec pkill -64 i3blocks
-bindsym $mod+F10 exec ~/.config/i3/pavolume +5%; exec pkill -64 i3blocks
+bindsym $mod+F4 exec ~/.config/i3/pavolume 0%; exec pkill -64 i3blocks
+bindsym $mod+F5 exec ~/.config/i3/pavolume -5%; exec pkill -64 i3blocks
+bindsym $mod+F6 exec ~/.config/i3/pavolume +5%; exec pkill -64 i3blocks
 
 
 # WINDOW MANAGEMENT:
@@ -95,7 +96,6 @@ mode "Resize" {
 bindsym $mod+r mode "Resize"
 
 # Kill focused window
-bindsym $mod+F4 kill
 bindsym $mod+q kill
 # Fullscreen for any application
 bindsym $mod+F11 fullscreen toggle
