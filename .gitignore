@@ -25,6 +25,9 @@
 !.local/share/applications
 .local/share/applications/*
 !.local/share/applications/mc.desktop
+!.config/mc
+.config/mc/*
+!.config/mc/menu
 
 # Compton
 !.config/compton.conf

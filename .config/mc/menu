@@ -1,0 +1,11 @@
+# Custom Menu File
+
+# Executable files
++ t x
+r Run this file
+	./%f
+
+# Only if a file
++ t n
+o Open the file with xdg-open
+	xdg-open %f
