@@ -15,13 +15,31 @@ volume=$( \
 		| grep 'volume' \
 		| tr -d '[:blank:]' \
 		| sed -e 's@^[^/]*/@@g' -e 's@/.*$@@g' \
+		| xargs printf '%02d' \
+)
+muted=$( \
+	pacmd list-sinks \
+		| grep -A11 '\*' \
+		| grep 'muted' \
+		| tr -d '[:blank:]' \
+		| sed -e 's@[^:]*:@@g' \
 )
 
 # full_text
-echo "VOL: $volume"
+if [[ $muted == 'yes' ]]
+then
+	echo "VOL: XX%"
+else
+	echo "VOL: $volume%"
+fi
 
 #short_text
-echo "VOL: $volume"
+if [[ $muted == 'yes' ]]
+then
+	echo "VOL: XX"
+else
+	echo "VOL: $volume%"
+fi
 
 # color
 echo "$COLOR_NORMAL"
