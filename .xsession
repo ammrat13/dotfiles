@@ -13,6 +13,3 @@ feh --no-fehbg --bg-scale ~/wallpaper.jpg
 # Disable screensaver
 xset s off
 xset -dpms
-
-# Main program
-i3
