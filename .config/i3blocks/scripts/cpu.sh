@@ -10,6 +10,7 @@ load=$( \
 	mpstat 1 1 \
 		| sed -e '4!d' \
 		| awk '{print 100-$12}' \
+		| xargs printf '%.2f'
 )
 temp=$( \
 	sensors \
