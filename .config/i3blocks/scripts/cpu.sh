@@ -9,7 +9,7 @@ source .config/i3blocks/scripts/colors.sh
 load=$( \
 	mpstat 1 1 \
 		| sed -e '4!d' \
-		| awk '{print 100-$12}' \
+		| awk '{print 100-$NF}' \
 		| xargs printf '%.2f'
 )
 temp=$( \
