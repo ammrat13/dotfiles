@@ -11,6 +11,9 @@ if [[ $- != *i* ]] ; then
 	return
 fi
 
+# Color ls output as it is not done by default
+alias ls="ls --color=auto"
+
 # Use aliases with sudo
 alias sudo="sudo "
 
