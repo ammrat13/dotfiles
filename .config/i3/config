@@ -32,6 +32,10 @@ bindsym XF86AudioMute exec --no-startup-id ~/.config/i3/pavolume toggle; exec --
 bindsym XF86AudioLowerVolume exec --no-startup-id ~/.config/i3/pavolume -5%; exec --no-startup-id pkill -64 i3blocks
 bindsym XF86AudioRaiseVolume exec --no-startup-id ~/.config/i3/pavolume +5%; exec --no-startup-id pkill -64 i3blocks
 
+# Brightness control
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+
 
 # WINDOW MANAGEMENT:
 
