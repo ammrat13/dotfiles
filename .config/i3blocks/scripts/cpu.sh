@@ -14,8 +14,8 @@ load=$( \
 )
 temp=$( \
 	sensors \
-		| grep 'Tdie' \
-		| awk '{print $2}' \
+		| grep 'Package' \
+		| awk '{print $4}' \
 		| sed -e 's/^.//g' -e 's/..$//g' \
 )
 
