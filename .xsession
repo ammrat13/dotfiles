@@ -3,8 +3,8 @@ if [[ -f ~/.Xresources ]]; then
 	xrdb -merge -I$HOME ~/.Xresources
 fi
 
-# Start pulseaudio in case it fails
-pulseaudio --start
+# Start pulseaudio before i3
+systemctl --user start pulseaudio
 # Start compton for saturation effects
 compton &
 
