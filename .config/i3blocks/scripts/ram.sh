@@ -10,7 +10,7 @@ ram=$( \
 	free -m \
 		| sed -e '2!d' \
 		| awk '{print $3/1024}' \
-		| xargs printf '%.2f' \
+		| xargs printf '%.1f' \
 )
 swap=$( \
 	free -m \

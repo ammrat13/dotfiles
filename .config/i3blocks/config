@@ -9,6 +9,10 @@ command=.config/i3blocks/scripts/${BLOCK_NAME}.sh
 interval=once
 signal=30
 
+[bat]
+interval=60
+signal=29
+
 [cpu]
 interval=10
 

@@ -5,12 +5,12 @@
 
 source .config/i3blocks/scripts/colors.sh
 
-# Get the values from /proc/loadavg and lm_sensors
+# Get the values from mpstat and lm_sensors
 load=$( \
 	mpstat 1 1 \
 		| sed -e '4!d' \
 		| awk '{print 100-$NF}' \
-		| xargs printf '%.2f'
+		| xargs printf '%.0f'
 )
 temp=$( \
 	sensors \
