@@ -3,7 +3,7 @@
 URxvt*cursorUnderline: 1
 URxvt*cursorBlink: 1
 URxvt*scrollBar: 0
-URxvt*font:xft:Hack:size=8
+URxvt*font:xft:Hack:size=11
 
 ! Chosen at terminal.sexy
 ! Chosen with https://github.com/thefryscorer/schemer
