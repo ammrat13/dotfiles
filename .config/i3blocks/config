@@ -12,14 +12,11 @@ signal=30
 [cpu]
 interval=10
 
-[gpu]
-interval=10
-
 [ram]
 interval=30
 
 [date]
-command=echo "$(date '+%a %Y-%m-%d %H:%M')"
+command=echo "$(date '+%a %y-%m-%d %H:%M')"
 interval=60
 
 [placeholder]

@@ -20,10 +20,10 @@ temp=$( \
 )
 
 # full_text
-echo "CPU: $load% $temp°C"
+echo "CPU: $load%"
 
 # short_text
-echo "CPU: $temp°C"
+echo "CPU: $load%"
 
 # Color it red if temp above 70
 if [[ $(echo $temp | xargs printf '%.0f') -ge '70' ]]

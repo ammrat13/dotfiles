@@ -20,10 +20,10 @@ swap=$( \
 )
 
 # full_text
-echo "RAM: $ram GiB  SWAP: $swap GiB"
+echo "RAM: $ram GiB"
 
 # short_text
-echo "RAM: $ram GiB  SWAP: $swap GiB"
+echo "RAM: $ram GiB"
 
 # Color it red if swapping
 if [[ $swap != '0.00' ]]
