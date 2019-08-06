@@ -17,5 +17,5 @@ xset s off
 xset -dpms
 
 # Set volume and brightness
-xbacklight -set 80
+xbacklight -set 60
 ~/.config/i3/pavolume 40%
