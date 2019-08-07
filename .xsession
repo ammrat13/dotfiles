@@ -6,7 +6,7 @@ fi
 # Start pulseaudio in case it fails
 pulseaudio --start
 # Start compton for saturation effects
-compton &
+compton --paint-on-overlay &
 
 # Set desktop background
 feh --no-fehbg --bg-scale ~/wallpaper.jpg
