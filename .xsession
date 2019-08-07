@@ -6,7 +6,7 @@ fi
 # Start pulseaudio before i3
 systemctl --user start pulseaudio
 # Start compton for saturation effects
-compton &
+compton --paint-on-overlay &
 
 # Scale the display
 xrandr --output eDP1 --scale .8333333x.8333333
