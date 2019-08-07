@@ -30,7 +30,7 @@ if [[ $swap != '0.00' ]]
 then
 	echo "$COLOR_BAD"
 # Color it yellow if high ram utilization
-elif [[ $(free -m | sed -e '2!d' | awk '{print 100*$3/$4}' | xargs printf '%.0f') -ge '75' ]]
+elif [[ $(free -m | sed -e '2!d' | awk '{print 100*$3/$2}' | xargs printf '%.0f') -ge '75' ]]
 then
 	echo "$COLOR_DEGRADED"
 else
