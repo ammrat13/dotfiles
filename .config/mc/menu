@@ -1,7 +1,7 @@
 # Custom Menu File
 
 # Executable files
-+ t xn
++ t x & t n
 r Run this file
 	./%f
 
