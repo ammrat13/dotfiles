@@ -182,7 +182,7 @@ bar {
 # GAPS:
 
 # Required for gaps to work
-for_window [class=".*"] border pixel 0
+for_window [class=".*"] border pixel 1
 
 # Gaps between windows
 gaps inner 20
