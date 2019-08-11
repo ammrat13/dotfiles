@@ -8,4 +8,4 @@ r Run this file
 # Only if a file
 + t n
 o Open the file with xdg-open
-	xdg-open %f
+	xdg-open %f &
