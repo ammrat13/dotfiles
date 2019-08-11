@@ -16,6 +16,5 @@ feh --no-fehbg --bg-scale ~/wallpaper.jpg
 xset s off
 xset -dpms
 
-# Set volume and brightness
-xbacklight -set 60
+# Set volume because it is not remembered
 ~/.config/i3/pavolume 40%
