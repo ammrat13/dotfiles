@@ -12,7 +12,7 @@ Name[xh]=Umyaleli Waphakathi kobusuku
 Name[zu]=Umyaleli waphakathi nobusuku
 Comment=File manager
 Comment[pl]=Menedżer plików
-Exec=urxvt -e mc --nocolor %F
+Exec=urxvt -e sh -c "f=%f; mc --nocolor $f $(dirname $f)"
 Terminal=false
 Type=Application
 Categories=ConsoleOnly;Utility;FileManager;
