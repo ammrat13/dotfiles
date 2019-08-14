@@ -116,7 +116,7 @@ bindsym $mod+space focus mode_toggle
 
 # Scratchpad capabilities
 bindsym $mod+x move scratchpad
-bindsym $mod+z scratchpad show; floating toggle
+bindsym $mod+z scratchpad show
 
 
 # WORKSPACE MANAGEMENT:
