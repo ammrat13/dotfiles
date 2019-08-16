@@ -26,3 +26,13 @@ URxvt*color6:       #365c77
 URxvt*color14:      #365c77
 URxvt*color7:       #a6c0d8
 URxvt*color15:      #a6c0d8
+
+! Disable Ctrl+Shift shortcut
+! unix.stackexchange.com/questions/444773/how-to-disable-the-ctrlshift-binding-iso-14755-in-urxvt
+URxvt*iso14755: false
+URxvt*iso14755_52: false
+
+! Enable Ctrl+Shift+C and Ctrl+Shift+V
+! unix.stackexchange.com/questions/294337/rebinding-ctrl-alt-cv-to-ctrl-shift-cv-in-urxvt-9-20/329556#329556
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
