@@ -126,7 +126,7 @@ bindsym $mod+z scratchpad show
 # Use both the number row and the number pad
 set $ws1 "1: Default"
 set $ws2 "2: Reference"
-set $ws8 "8: Compile"
+set $ws8 "8: Background"
 set $ws9 "9: Music"
 
 # Move workspaces
