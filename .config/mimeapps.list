@@ -17,6 +17,7 @@ application/gzip=mc.desktop
 application/x-bzip=mc.desktop
 application/x-bzip2=mc.desktop
 application/x-xz=mc.desktop
+application/zip=mc.desktop
 application/pdf=firefox.desktop
 
 [Added Associations]
