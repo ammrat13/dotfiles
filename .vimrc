@@ -14,7 +14,7 @@ set relativenumber
 " Set up tabs
 set tabstop=4 shiftwidth=4
 set expandtab " Spaces by default
-set autoindent smartindent
+set autoindent
 
 " Show matching braces
 set showmatch
