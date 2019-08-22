@@ -20,3 +20,6 @@ alias sudo="sudo "
 # MIDNIGHT COMMANDER
 # No color by default
 alias mc="mc --nocolor"
+
+# Environment variables
+export CLASSPATH="$CLASSPATH:/usr/local/lib/java/*:."
