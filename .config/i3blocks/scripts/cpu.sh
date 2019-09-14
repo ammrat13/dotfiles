@@ -3,7 +3,7 @@
 # CPU script for i3blocks
 # Gets the cpu usage and temperatures
 
-source .config/i3blocks/scripts/colors.sh
+source ~/.config/i3blocks/scripts/colors.sh
 
 # Get the values from mpstat and lm_sensors
 load=$( \

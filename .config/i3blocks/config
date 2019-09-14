@@ -3,20 +3,24 @@ separator=true
 separator_block_width=20
 
 # We outsourced our commands
-command=.config/i3blocks/scripts/${BLOCK_NAME}.sh
+#command=.config/i3blocks/scripts/${BLOCK_NAME}.sh
 
 [volume]
+command=~/.config/i3blocks/scripts/volume.sh
 interval=once
 signal=30
 
 [bat]
+command=~/.config/i3blocks/scripts/bat.sh
 interval=60
 signal=29
 
 [cpu]
+command=~/.config/i3blocks/scripts/cpu.sh
 interval=10
 
 [ram]
+command=~/.config/i3blocks/scripts/ram.sh
 interval=30
 
 [date]

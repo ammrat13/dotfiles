@@ -3,7 +3,7 @@
 # RAM script for i3blocks
 # Gets the amount of RAM and SWAP we have used
 
-source .config/i3blocks/scripts/colors.sh
+source ~/.config/i3blocks/scripts/colors.sh
 
 # Get the values from `free`
 ram=$( \

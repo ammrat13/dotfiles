@@ -3,7 +3,7 @@
 # Volume script for i3blocks
 # Gets the volume from pacmd and outputs it with string manipulation
 
-source .config/i3blocks/scripts/colors.sh
+source ~/.config/i3blocks/scripts/colors.sh
 
 # The script is called by a realtime signal, but the change still has to be 
 # processed by pulse. Wait for a second for that.

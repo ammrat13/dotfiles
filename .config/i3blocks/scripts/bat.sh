@@ -3,7 +3,7 @@
 # Battery script for i3blocks
 # Gets how much battery is remaining
 
-source .config/i3blocks/scripts/colors.sh
+source ~/.config/i3blocks/scripts/colors.sh
 
 # Get the values from /sys/class/power_supply
 bat=$( \
