@@ -9,7 +9,7 @@ source .config/i3blocks/scripts/colors.sh
 temp=$( \
 	sensors \
 		| grep -A 5 'amdgpu' \
-		| grep 'temp1' \
+		| grep 'edge' \
 		| awk '{print $2}' \
 		| sed -e 's/^.//g' -e 's/..$//g' \
 )
